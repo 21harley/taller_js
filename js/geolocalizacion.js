@@ -11,7 +11,8 @@ export default function getGeolocation(id){
   };
   /*funcion si todo va bien*/
   const success=(position)=>{
-     console.log(position);
+     console.log(position.coords.GeolocationCoordinates);
+     /*
      $id.innerHTML=`
      <p>Tu posicion actual es:</p>
      <ul>
@@ -20,6 +21,7 @@ export default function getGeolocation(id){
         <li>Precision:<b>${position.coords.accuracy}</b>metros</li>
      </ul>
      `;
+     */
   };
   /*funcion para gestionar el error */
   const error=(err)=>{
