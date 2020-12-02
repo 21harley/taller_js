@@ -11,7 +11,7 @@ export default function getGeolocation(id){
   };
   /*funcion si todo va bien*/
   const success=(position)=>{
-     console.log(position.coords.GeolocationCoordinates);
+     console.log(position.coords);
      /*
      $id.innerHTML=`
      <p>Tu posicion actual es:</p>
