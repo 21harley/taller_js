@@ -11,7 +11,7 @@ export default function getGeolocation(id){
   };
   /*funcion si todo va bien*/
   const success=(position)=>{
-    const id=d.getElementById("geolocation");   
+    id=document.getElementById("geolocation");   
      id.innerHTML=`
      <p>Tu posicion actual es:</p>
      <ul>
