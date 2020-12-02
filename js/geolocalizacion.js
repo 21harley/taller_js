@@ -10,8 +10,8 @@ export default function getGeolocation(id){
       maximumAge:0,/*para que no tome como referencia lecturas anterioes*/ 
   };
   /*funcion si todo va bien*/
-  const success=(position,id)=>{
-    const id=d.getElementById(id);   
+  const success=(position)=>{
+    const id=d.getElementById("geolocation");   
      id.innerHTML=`
      <p>Tu posicion actual es:</p>
      <ul>
