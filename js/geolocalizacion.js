@@ -11,14 +11,13 @@ export default function getGeolocation(id){
   };
   /*funcion si todo va bien*/
   const success=(position)=>{
-     let coords=position.coords;
      console.log(position);
      $id.innerHTML=`
      <p>Tu posicion actual es:</p>
      <ul>
-        <li>Latitud:<b>${coords.latitude}</b></li>
-        <li>Longitud:<b>${coords.longitude}</b></li>
-        <li>Precision:<b>${coords.accuracy}</b>metros</li>
+        <li>Latitud:<b>${position.coords.latitude}</b></li>
+        <li>Longitud:<b>${position.coords.longitude}</b></li>
+        <li>Precision:<b>${position.coords.accuracy}</b>metros</li>
      </ul>
      `;
   };
