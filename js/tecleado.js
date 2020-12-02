@@ -7,7 +7,7 @@ export function moveBall(e,ball,stage){
  const $stage=d.querySelector(stage);
  let limitsBall=$ball.getBoundingClientRect();
  let limitsStage=$stage.getBoundingClientRect();
- console.log(limitsBall,limitsStage); 
+
   switch(e.keyCode){
       //izq
       case 37:
@@ -43,7 +43,7 @@ export function moveBall(e,ball,stage){
         }
       break;
   }
-  console.log(" X:"+x+" Y:"+y);
+ 
   $ball.style.transform=`translate(${x*10}px,${y*10}px)`;
 }
 

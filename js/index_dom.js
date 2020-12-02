@@ -3,6 +3,7 @@ import countdown from "./cuenta_regresiva.js";
 import userDeviceinfo from "./deteccion_dispositivos.js";
 import networkStatus from "./deteccion_red.js";
 import webCam from "./deteccion_webcam.js";
+import searchFilters from "./filtro_busqueda.js";
 import getGeolocation from "./geolocalizacion.js";
 import hamburgerMenu from "./menu_hamburguesa.js";
 import responsiveMedia from "./objeto_reponsive.js";
@@ -35,7 +36,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
      responsiveTester("responsive-tester"); 
      userDeviceinfo("user-device");
      webCam("webcam");
-     getGeolocation("geolocation");                                      
+     getGeolocation("geolocation");
+     searchFilters(".card-filter",".card");                                      
 });
 
 d.addEventListener("keydown",(e)=>{
