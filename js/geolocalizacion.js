@@ -10,10 +10,9 @@ export default function getGeolocation(id){
       maximumAge:0,/*para que no tome como referencia lecturas anterioes*/ 
   };
   /*funcion si todo va bien*/
-  const success=(position)=>{
-     console.log(position.coords.accuracy);
-     /*
-     $id.innerHTML=`
+  const success=(position,id)=>{
+    const id=d.getElementById(id);   
+     id.innerHTML=`
      <p>Tu posicion actual es:</p>
      <ul>
         <li>Latitud:<b>${position.coords.latitude}</b></li>
@@ -21,7 +20,7 @@ export default function getGeolocation(id){
         <li>Precision:<b>${position.coords.accuracy}</b>metros</li>
      </ul>
      `;
-     */
+     
   };
   /*funcion para gestionar el error */
   const error=(err)=>{
