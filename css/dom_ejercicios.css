@@ -34,6 +34,7 @@ img{
 /* posicionar en cabezado*/
 header{
     position: sticky;
+    z-index: 997;
     top: 0;
     padding: 1rem;
     background-color: var(--main-color);
@@ -242,4 +243,115 @@ header h1{
     visibility: hidden;
     opacity: 0;
     order:1;
+}
+/**************** Resposive Slider ********/
+.slider{
+    position: relative;
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.slider-slides{
+    position: relative;
+    height: 400px;
+}
+
+.slider-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slider-slide img{
+ height: inherit;
+ width: 40%;
+ object-fit: cover;
+ object-position: 50% 0%;
+}
+
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+.slider-btns{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.slider a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.slider a:hover{
+    color: #4d4d4d;
+}
+/**************** ScrollSpy ********/
+@media screen and (min-width: 1024px){
+  body{
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: 4rem auto;
+      grid-template-areas: 
+       "header header"
+       "main   panel"
+      ; 
+  }
+  main{
+      grid-area:main;
+  }
+  .header{
+      grid-area: header;
+  }
+  .panel-btn{
+      display: none;
+  }
+  .panel{
+    grid-area: panel;
+    position: sticky;
+    top: 4rem;
+    background-color: var(--second-color);
+    justify-content: flex-start;
+    align-self: start;
+    transform: translate(0,0);
+    opacity: 1;
+    visibility: visible;
+}
+.menu{
+    justify-content: start;
+    text-align: center;
+}
+
+.menu a{
+    font-size: 1rem;
+    padding: .75rem;
+}
+
+.menu a:hover,
+.menu a.active{
+    color:var(--second-color);
+    background-color: var(--main-color);
+}
+
+.scroll-top-btn{
+    right: initial;
+    left: calc(4.25rem + 1vw);
+}
+
 }

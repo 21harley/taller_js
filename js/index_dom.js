@@ -1,4 +1,5 @@
 import scrollTopButtom from "./bottom_Scroll.js";
+import slider from "./carrusel.js";
 import countdown from "./cuenta_regresiva.js";
 import userDeviceinfo from "./deteccion_dispositivos.js";
 import networkStatus from "./deteccion_red.js";
@@ -9,6 +10,8 @@ import hamburgerMenu from "./menu_hamburguesa.js";
 import responsiveMedia from "./objeto_reponsive.js";
 import responsiveTester from "./prueba_responsive.js";
 import {digitalClock,alarm} from "./reloj.js";
+import srcrollSpy from "./scroll_espia.js";
+import draw from "./sorteo.js";
 import {moveBall,shortcuts} from "./tecleado.js";
 import darkTheme from "./tema_oscuro.js";
 
@@ -37,7 +40,10 @@ d.addEventListener("DOMContentLoaded",(e)=>{
      userDeviceinfo("user-device");
      webCam("webcam");
      getGeolocation("geolocation");
-     searchFilters(".card-filter",".card");                                      
+     searchFilters(".card-filter",".card"); 
+     draw("#winner-btn",".player");
+     slider();
+     srcrollSpy();                                     
 });
 
 d.addEventListener("keydown",(e)=>{
