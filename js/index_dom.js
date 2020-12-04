@@ -14,6 +14,8 @@ import srcrollSpy from "./scroll_espia.js";
 import draw from "./sorteo.js";
 import {moveBall,shortcuts} from "./tecleado.js";
 import darkTheme from "./tema_oscuro.js";
+import contactFormValidacions from "./validacion_form.js";
+import smartVideo from "./video_inteligente.js";
 
 const d=document;
 /*DOMContentLoaded es la primera carga del documento
@@ -43,7 +45,9 @@ d.addEventListener("DOMContentLoaded",(e)=>{
      searchFilters(".card-filter",".card"); 
      draw("#winner-btn",".player");
      slider();
-     srcrollSpy();                                     
+     srcrollSpy();
+     smartVideo();
+     contactFormValidacions();                                    
 });
 
 d.addEventListener("keydown",(e)=>{

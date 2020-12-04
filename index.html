@@ -37,8 +37,8 @@
           <a data-croll-spy href="#seccion10">Filtros de Busquedas</a>
           <a data-croll-spy href="#seccion11">Sorteo Digital</a>
           <a data-croll-spy href="#seccion12">Responsive Slider</a>
-          <a data-croll-spy href="#seccion13">Seccion 13</a>
-          <a data-croll-spy href="#seccion14">Seccion 14</a>
+          <a data-croll-spy href="#seccion13">Video Inteligente</a>
+          <a data-croll-spy href="#seccion14">Validaciones de Formulario</a>
           <a data-croll-spy href="#seccion15">Seccion 15</a>
         </nav>
     </aside>
@@ -166,10 +166,32 @@
             </div>
         </section>
         <section id="seccion13" class="section" data-croll-spy>
-            <h2>seccion 13</h2>
+            <h2>Video Inteligente</h2>
+            <video src="assets/Música Amigos Y Fiesta .mp4" muted controls loop data-smart-video></video>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <video src="assets/Música Amigos Y Fiesta .mp4" muted controls loop data-smart-video></video>
         </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <section id="seccion14" class="section" data-croll-spy>
-            <h2>seccion 14</h2>
+            <h2>Validaciones de Formulario</h2>
+            <!-- formulario solo funciona en servidor -->
+            <form class="contact-form" action="https://formsubmit.co/john.llanes.1996@gmail.com" method="POST">
+                <legend>Evianos tus comentarios</legend>
+                <input type="text" name="name" placeholder="Ecribe tu nombre" 
+                title="El nombre acepta letras y espacios en blanco" 
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+                <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" required></textarea>
+                <input type="submit" value="Enviar" >
+                <div class="contact-form-loader none">
+                    <img src="assets/loader.svg" alt="Cargando">
+                </div>
+                <div class="contact-form-reponse none">
+                    <p>Los datos han sido enviados</p>
+                </div>
+            </form>
         </section>
         <section id="seccion15" class="section" data-croll-spy>
             <h2>seccion 15</h2>
